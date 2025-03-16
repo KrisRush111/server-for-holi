@@ -2,8 +2,6 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import json
 import os
-import time
-import requests
 
 app = Flask(__name__)
 CORS(app)
@@ -58,16 +56,6 @@ def get_user(user_id):
 def home():
     """Проверка работы сервера"""
     return "Bot server is running!", 200
-
-# Функция пинга для предотвращения засыпания сервера
-def ping_server():
-    while True:
-        try:
-            requests.get("https://server-for-holi-111.onrender.com/")
-            print("[INFO] Сервер пингуется для предотвращения засыпания.")
-        except Exception as e:
-            print(f"[ERROR] Ошибка при пинге: {e}")
-        time.sleep(600)  # Пинг каждые 10 минут
 
 
 if __name__ == "__main__":
