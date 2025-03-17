@@ -64,4 +64,4 @@ if __name__ == "__main__":
         with open(USER_DATA_FILE, "w", encoding="utf-8") as file:
             json.dump({}, file)
 
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=6000)
