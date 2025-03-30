@@ -68,7 +68,7 @@ def home():
 def ping_server():
     while True:
         try:
-            requests.get("https://server-for-holi-222.onrender.com/")
+            requests.get("https://server-for-holi-111.onrender.com/")
             print("[INFO] Сервер пингуется для предотвращения засыпания.")
         except Exception as e:
             print(f"[ERROR] Ошибка при пинге: {e}")
